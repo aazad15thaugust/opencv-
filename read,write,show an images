@@ -1,0 +1,19 @@
+import cv2
+
+img = cv2.imread('code.jpg',-1)
+
+print(img)
+
+
+cv2.imshow('aazad', img)
+
+
+#cv2.imwrite('aazad_copy.png', img)
+
+k = cv2.waitKey(5000)
+
+if k ==27:
+ cv2.DestroyAllWindows()
+elif k == ord('s'):
+ cv2.imwrite('aazad_copy.png', img)
+ cv2.DestroyAllWindows()
